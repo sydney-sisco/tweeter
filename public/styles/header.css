@@ -8,4 +8,5 @@ header.site-header {
   background-color: #ff7f50;
   background-image: url("../images/argyle.png");
   color: white;
+  margin-top: 120px;
 }

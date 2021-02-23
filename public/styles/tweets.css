@@ -24,8 +24,6 @@ article.tweet header div {
 }
 
 article.tweet header img {
-  width: 64px;
-  height: 64px;
   margin-right: 1em;
 }
 
@@ -37,7 +35,6 @@ article.tweet header span {
   font-weight: bold;
   color: #C6CCE3;
 }
-
 
 article.tweet p {
   padding: 1em 1em;

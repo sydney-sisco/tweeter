@@ -45,6 +45,18 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets" method="POST">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis ut arcu eget lacinia. In hac habitasse platea dictumst. Sed neque orci, malesuada in euismod ac, condimentum eu mi. Integer et vehicula lorem. Aenean ultrices massa bibendum, ultrices purus ac, imperdiet ante. Donec consectetur vestibulum arcu, sed vehicula mi suscipit in. Duis ac fringilla nulla, sed malesuada est. Phasellus vitae dolor vel massa tempor pulvinar. Nullam pharetra sed sem nec pretium. Mauris sed dolor eget velit consectetur porta eu at risus. Sed lorem magna, faucibus et odio nec, tempus egestas lectus. Donec laoreet ipsum interdum nisi convallis, vitae posuere felis bibendum. Donec massa urna, blandit sit amet leo vel, dapibus cursus eros. Pellentesque mollis ut augue ac pharetra. Duis in tortor suscipit, finibus libero venenatis, feugiat urna.
 
         Curabitur ut ante non urna congue luctus. Aliquam vel elit nec eros aliquet pharetra eu quis eros. Praesent blandit hendrerit volutpat. Sed aliquet odio at volutpat imperdiet. Fusce a convallis nisl. Vestibulum eu auctor nulla, vel imperdiet massa. Mauris laoreet ex tortor, sit amet gravida tellus porttitor sit amet. Phasellus sapien justo, porta vitae erat sit amet, interdum pretium dolor. Donec at tempor nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec ligula mi, ultrices lobortis leo sed, finibus euismod libero. In vulputate scelerisque sagittis. Duis semper varius eleifend.

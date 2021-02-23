@@ -28,7 +28,7 @@ main textarea {
   font-size: .75em;
 }
 
-main div {
+main.container section.new-tweet div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

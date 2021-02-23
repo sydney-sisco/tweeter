@@ -1,0 +1,49 @@
+main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+main section {
+  width: 100%;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main label {
+  /* font-size: 1.5em; */
+  font-weight: bold;
+}
+
+main textarea {
+  border: none;
+  border-bottom: 5px solid #545149;
+  background: transparent;
+  resize: none;
+  outline-width: 0;
+  font-size: .75em;
+}
+
+main div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 0em;
+}
+
+main button {
+  font-family: 'Bungee';
+  background-color: #4056A1;
+  color: white;
+  border: 0px;
+  padding: .25em .5em;
+}
+
+main output {
+  font-family: 'Bungee';
+
+}

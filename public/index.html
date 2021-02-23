@@ -22,6 +22,9 @@
     
     <!-- Form CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    
+    <!-- Tweet CSS -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,7 +42,7 @@
       <span>tweeter</span>
     </nav>
 
-    <header>
+    <header class="site-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -61,6 +64,33 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+
+      <!-- To be filled in with tweets -->
+      <section id="tweets">
+
+        <!-- an example tweet -->
+        <article class="tweet">
+          <header>
+            <div>
+              <img src="https://i.imgur.com/nlhLi3I.png">
+              <h3>Syd Sisco</h3>
+            </div>
+            <span>@sydney-sisco</span>
+          </header>
+
+          <p>This is a post that is exactly one hundred and forty characters long. Isn't that the best thing ever? You might even say that it is awesome.</p>
+
+          <footer>
+            <p>6 minutes ago</p>
+            <div>
+              (report)
+              (retweet)
+              (like)
+            </div>
+          </footer>
+        </article>
+
       </section>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis ut arcu eget lacinia. In hac habitasse platea dictumst. Sed neque orci, malesuada in euismod ac, condimentum eu mi. Integer et vehicula lorem. Aenean ultrices massa bibendum, ultrices purus ac, imperdiet ante. Donec consectetur vestibulum arcu, sed vehicula mi suscipit in. Duis ac fringilla nulla, sed malesuada est. Phasellus vitae dolor vel massa tempor pulvinar. Nullam pharetra sed sem nec pretium. Mauris sed dolor eget velit consectetur porta eu at risus. Sed lorem magna, faucibus et odio nec, tempus egestas lectus. Donec laoreet ipsum interdum nisi convallis, vitae posuere felis bibendum. Donec massa urna, blandit sit amet leo vel, dapibus cursus eros. Pellentesque mollis ut augue ac pharetra. Duis in tortor suscipit, finibus libero venenatis, feugiat urna.

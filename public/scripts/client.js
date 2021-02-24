@@ -74,7 +74,7 @@ const createTweetElement = (tweet) => {
         </div>
         <span>${tweet.user.handle}</span>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escapeText(tweet.content.text)}</p>
       <footer>
         <span>
           ${DateTime.fromMillis(tweet.created_at).toRelative()}
@@ -89,4 +89,10 @@ const createTweetElement = (tweet) => {
   `;
 
   return $tweet;
+};
+
+const escapeText = (string) => {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(string));
+  return div.innerHTML;
 };

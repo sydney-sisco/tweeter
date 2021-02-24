@@ -20,7 +20,7 @@ const formSubmissionHandler = function(event) {
   event.preventDefault();
 
   // get the tweet text from the textarea
-  const $tweetTextElement = $(this).children('#tweet-text'); //TODO:  too specific?
+  const $tweetTextElement = $('#tweet-text');
   const tweetText = $tweetTextElement.val();
 
   // if there is no tweet text, show error
@@ -36,10 +36,11 @@ const formSubmissionHandler = function(event) {
   }
 
   // POST the tweet data using AJAX
-  $.post('tweets/', $(this).serialize(), (data) => {
+  $.post('tweets/', $(this).serialize())
+  .then((data) => {
+    console.log('data returned from server:', data);
     $tweetTextElement.val('');
-    console.log(data);
-    loadtweets(); //TODO: is this where to put this?
+    loadtweets();
   });
 };
 
@@ -48,7 +49,7 @@ const loadtweets = function() {
   $.get('/tweets', function(tweets) {
     console.log(tweets);
   }).then(function(tweets) {
-    renderTweets(tweets); //TODO: like this?
+    renderTweets(tweets);
   });
 };
 
@@ -73,9 +74,7 @@ const createTweetElement = (tweet) => {
         </div>
         <span>${tweet.user.handle}</span>
       </header>
-
       <p>${tweet.content.text}</p>
-
       <footer>
         <span>
           ${DateTime.fromMillis(tweet.created_at).toRelative()}

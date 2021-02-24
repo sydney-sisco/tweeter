@@ -5,7 +5,7 @@
  */
 
 // luxon library is used to format timestamps on tweets
-var DateTime = luxon.DateTime;
+const DateTime = luxon.DateTime;
 
 $(document).ready(function() {
   
@@ -39,15 +39,18 @@ const formSubmissionHandler = function(event) {
   $.post('tweets/', $(this).serialize(), (data) => {
     $tweetTextElement.val('');
     console.log(data);
-    loadtweets();
-  })
-}
+    loadtweets(); //TODO: is this where to put this?
+  });
+};
 
+// loads tweets from the server using AJAX
 const loadtweets = function() {
   $.get('/tweets', function(tweets) {
     console.log(tweets);
-  }).then(function(tweets){renderTweets(tweets)});
-}
+  }).then(function(tweets) {
+    renderTweets(tweets);
+  }); //TODO: like this?
+};
 
 // loops through tweets and appends them to the container
 const renderTweets = function(tweets) {
@@ -56,10 +59,11 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);
   }
-}
+};
 
+// creates the HTML for a tweet
 const createTweetElement = (tweet) => {
-  
+
   let $tweet = `
     <article class="tweet">
       <header>

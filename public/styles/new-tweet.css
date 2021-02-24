@@ -9,6 +9,17 @@ main section {
   width: 100%;
 }
 
+.new-tweet .error-msg {
+  display: flex;
+  justify-content: center;
+  border: 5px solid red;
+  color: red;
+  padding: 1rem 0rem;
+  margin: 2rem 0rem;
+
+  /* visibility: hidden; */
+}
+
 main form {
   display: flex;
   flex-direction: column;
@@ -28,7 +39,7 @@ main textarea {
   font-size: .75em;
 }
 
-main.container section.new-tweet div {
+section.new-tweet .button-and-counter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

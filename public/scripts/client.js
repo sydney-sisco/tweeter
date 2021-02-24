@@ -7,6 +7,24 @@
 // luxon library is used to format timestamps on tweets
 var DateTime = luxon.DateTime;
 
+$(document).ready(function() {
+  renderTweets(data);
+  
+  // form submission for new tweets
+  $('main form').submit(formSubmissionHandler);
+
+});
+
+// handler for the new tweet form
+const formSubmissionHandler = function(event) {
+  event.preventDefault();
+
+  // POST the tweet data using AJAX
+  $.post('tweets/', $(this).serialize(), (data) => {
+    console.log(data);
+  })
+}
+
 // Fake data taken from initial-tweets.json
 const data = [
   {
@@ -70,7 +88,3 @@ const createTweetElement = (tweet) => {
 
   return $tweet;
 };
-
-$(document).ready(function() {
-  renderTweets(data);
-});

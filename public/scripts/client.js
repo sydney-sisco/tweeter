@@ -20,7 +20,7 @@ const formSubmissionHandler = function(event) {
   event.preventDefault();
 
   // get the tweet text from the textarea
-  const $tweetTextElement = $(this).children('#tweet-text');
+  const $tweetTextElement = $(this).children('#tweet-text'); //TODO:  too specific?
   const tweetText = $tweetTextElement.val();
 
   // if there is no tweet text, show error
@@ -48,8 +48,8 @@ const loadtweets = function() {
   $.get('/tweets', function(tweets) {
     console.log(tweets);
   }).then(function(tweets) {
-    renderTweets(tweets);
-  }); //TODO: like this?
+    renderTweets(tweets); //TODO: like this?
+  });
 };
 
 // loops through tweets and appends them to the container

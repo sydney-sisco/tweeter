@@ -19,8 +19,28 @@ $(document).ready(function() {
 const formSubmissionHandler = function(event) {
   event.preventDefault();
 
+  // console.log('value:',$(this).text());
+  // console.log($(this).children('#tweet-text').val());
+
+  // get the tweet text from the textarea
+  const $tweetTextElement = $(this).children('#tweet-text');
+  const tweetText = $tweetTextElement.val();
+
+  // if there is no tweet text, show error
+  if (!tweetText || !tweetText.length) {
+    alert("You cannot submit an empty tweet!");
+    return;
+  }
+
+  // if tweet text is too long, show error
+  if (tweetText.length > 140) {
+    alert('Your tweet is too long!');
+    return;
+  }
+
   // POST the tweet data using AJAX
   $.post('tweets/', $(this).serialize(), (data) => {
+    $tweetTextElement.val('');
     console.log(data);
   })
 }

@@ -19,9 +19,6 @@ $(document).ready(function() {
 const formSubmissionHandler = function(event) {
   event.preventDefault();
 
-  // console.log('value:',$(this).text());
-  // console.log($(this).children('#tweet-text').val());
-
   // get the tweet text from the textarea
   const $tweetTextElement = $(this).children('#tweet-text');
   const tweetText = $tweetTextElement.val();
@@ -42,6 +39,7 @@ const formSubmissionHandler = function(event) {
   $.post('tweets/', $(this).serialize(), (data) => {
     $tweetTextElement.val('');
     console.log(data);
+    loadtweets();
   })
 }
 
@@ -53,6 +51,7 @@ const loadtweets = function() {
 
 // loops through tweets and appends them to the container
 const renderTweets = function(tweets) {
+  $('#tweets-container').empty();
   for (const tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);

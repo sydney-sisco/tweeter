@@ -4,7 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+// luxon library is used to format timestamps on tweets
+var DateTime = luxon.DateTime;
 
 // Test / driver code (temporary). Eventually will get this from the server.
 const tweetData = {
@@ -18,6 +19,8 @@ const tweetData = {
     },
   "created_at": 1461116232227
 }
+
+
 
 const createTweetElement = (data) => {
   // return $(`<article class="tweet">Hello world</article>`);
@@ -36,7 +39,7 @@ const createTweetElement = (data) => {
 
     <footer>
       <span>
-        ${data.created_at}
+        ${DateTime.fromMillis(data.created_at).toRelative()}
       </span>
       <div>
         <img src="/images/flag-solid.svg" alt="report">

@@ -15,28 +15,20 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.responsive-test {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
-}
-
 main {
-
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -45,6 +37,7 @@ main {
  /* Desktop styles */
 @media only screen and (min-width: 1024px) {
   main {
+    margin-top: 120px;
     max-width: 50%;
   }
 }

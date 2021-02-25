@@ -19,19 +19,25 @@ $(document).ready(function() {
 const formSubmissionHandler = function(event) {
   event.preventDefault();
 
+  // clear any existing error messages
+  $('.error-msg').empty();
+  $(".error-msg").slideUp(100);
+
   // get the tweet text from the textarea
   const $tweetTextElement = $('#tweet-text');
   const tweetText = $tweetTextElement.val();
 
   // if there is no tweet text, show error
   if (!tweetText || !tweetText.length) {
-    alert("You cannot submit an empty tweet!");
+    $('.error-msg').append('❗Did you forget something?❗');
+    $(".error-msg").slideDown(100);
     return;
   }
 
   // if tweet text is too long, show error
   if (tweetText.length > 140) {
-    alert('Your tweet is too long!');
+    $('.error-msg').append('❗Too long. Please keep your thoughts to 140 characters or less.❗');
+    $(".error-msg").slideDown(100);
     return;
   }
 

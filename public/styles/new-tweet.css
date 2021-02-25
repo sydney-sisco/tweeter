@@ -10,15 +10,14 @@ main section {
 }
 
 .new-tweet .error-msg {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   border: 5px solid red;
   color: red;
   padding: 1rem 0rem;
   margin: 2rem 0rem;
 
-  /* visibility: hidden; */
-}
+  display: none;
+  }
 
 main form {
   display: flex;

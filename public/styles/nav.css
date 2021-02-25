@@ -2,15 +2,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   height: 120px;
   background-color: transparent;
   color: #FFFFFF;
-  /* padding: 1.5em; */
 
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  /* keep the nav bar fixed at the top */
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav .title {

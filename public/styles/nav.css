@@ -4,7 +4,7 @@ nav {
   align-items: flex-start;
 
   height: 120px;
-  background-color: #4056A1;
+  background-color: transparent;
   color: #FFFFFF;
   /* padding: 1.5em; */
 
@@ -32,3 +32,9 @@ nav .compose img {
   width: 16px;
 }
 
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+}

@@ -11,6 +11,9 @@ $(document).ready(function() {
   
   // form submission for new tweets
   $('main form').submit(formSubmissionHandler);
+
+  // add a listener to the form toggle
+  $('.compose').click(composeClickHandler);
   
   loadtweets();
 });
@@ -97,8 +100,15 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
+// TODO: move this out to a helper function file?
 const escapeText = (string) => {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(string));
   return div.innerHTML;
 };
+
+// toggles the new-tweet form
+const composeClickHandler = function(event) {
+  $('.new-tweet').slideToggle();
+  $('#tweet-text').focus();
+}

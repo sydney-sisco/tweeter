@@ -1,14 +1,34 @@
 nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 1.5em;
+  /* padding: 1.5em; */
 
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
 }
 
-nav span {
+nav .title {
   font-family: 'Bungee';
+  margin: 1.5rem 1.5rem;
 }
+
+nav .compose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: smaller;
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+nav .compose img {
+  height: 16px;
+  width: 16px;
+}
+

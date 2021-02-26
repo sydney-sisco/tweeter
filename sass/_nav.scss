@@ -2,7 +2,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  height: 120px;
+  height: $navHeight;
   background-color: transparent;
   color: #FFFFFF;
 
@@ -10,25 +10,25 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-}
 
-nav .title {
-  font-family: 'Bungee';
-  padding: 1.5rem 1.5rem;
-}
+  .title {
+    font-family: 'Bungee';
+    padding: 1.5rem 1.5rem;
+  }
 
-nav .compose {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: smaller;
-  padding: 1.5rem 1.5rem;
-  cursor: pointer;
-}
+  .compose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: smaller;
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+  }
 
-nav .compose img {
-  height: 16px;
-  width: 16px;
+  img {
+    height: 16px;
+    width: 16px;
+  }
 }
 
 /* Desktop styles */

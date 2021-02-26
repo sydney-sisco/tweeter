@@ -1,0 +1,216 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  main {
+    margin-top: 120px;
+    max-width: 50%;
+  }
+}
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ff7f50;
+  background-image: url("../images/argyle.png");
+  color: white;
+  padding-top: 50px;
+  height: 400px;
+  width: 100%;
+}
+.site-header > h2 {
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .site-header {
+    max-width: 40%;
+    margin-top: 120px;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 120px;
+  background-color: transparent;
+  color: #FFFFFF;
+  /* keep the nav bar fixed at the top */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+nav .title {
+  font-family: "Bungee";
+  padding: 1.5rem 1.5rem;
+}
+nav .compose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: smaller;
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+}
+nav img {
+  height: 16px;
+  width: 16px;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-tweet {
+  width: 100%;
+}
+.new-tweet .error-msg {
+  text-align: center;
+  border: 5px solid red;
+  color: red;
+  padding: 1rem 0rem;
+  margin: 2rem 0rem;
+  display: none;
+}
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+.new-tweet form label {
+  font-weight: bold;
+}
+.new-tweet form textarea {
+  border: none;
+  border-bottom: 5px solid #545149;
+  background: transparent;
+  resize: none;
+  outline-width: 0;
+  font-size: 0.75em;
+}
+.new-tweet form .button-and-counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 0em;
+}
+.new-tweet form button {
+  font-family: "Bungee";
+  background-color: #4056A1;
+  color: white;
+  border: 0px;
+  padding: 0.25em 0.5em;
+}
+.new-tweet form .counter {
+  font-family: "Bungee";
+}
+
+.toolong {
+  color: red;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #545149;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.tweet header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.25em 1em;
+}
+.tweet header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet .avatar {
+  margin-right: 1em;
+}
+.tweet .username {
+  font-weight: lighter;
+}
+.tweet .handle {
+  font-weight: bold;
+  color: #C6CCE3;
+}
+.tweet p {
+  padding: 1em 1em;
+  margin: 0.25em 1em;
+  font-weight: bolder;
+  border-bottom: 5px solid #545149;
+}
+.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25em 1em;
+}
+.tweet .timestamp {
+  font-size: 0.75em;
+}
+.tweet .action-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  visibility: hidden;
+}
+.tweet .action-icons img {
+  height: 16px;
+  width: 16px;
+  margin: 0.25em 0.25em;
+}
+.tweet:hover {
+  box-shadow: 8px 8px #C6CCE3;
+}
+.tweet:hover .action-icons {
+  visibility: visible;
+}

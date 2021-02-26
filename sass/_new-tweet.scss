@@ -4,58 +4,60 @@ main {
   align-items: center;
 }
 
-main section {
+.new-tweet {
   width: 100%;
+
+  .error-msg {
+    text-align: center;
+    border: 5px solid red;
+    color: red;
+    padding: 1rem 0rem;
+    margin: 2rem 0rem;
+  
+    // error frame is hidden until jquery shows it
+    display: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-weight: bold;
+    }
+
+    textarea {
+      border: none;
+      border-bottom: 5px solid $lineColour;
+      background: transparent;
+      resize: none;
+      outline-width: 0;
+      font-size: .75em;
+    }
+
+    .button-and-counter {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1em 0em;
+    }
+
+    button {
+      font-family: 'Bungee';
+      background-color: #4056A1;
+      color: white;
+      border: 0px;
+      padding: .25em .5em;
+    }
+
+    .counter {
+      font-family: 'Bungee';
+    }
+  }
 }
 
-.new-tweet .error-msg {
-  text-align: center;
-  border: 5px solid red;
-  color: red;
-  padding: 1rem 0rem;
-  margin: 2rem 0rem;
-
-  display: none;
-}
-
-main form {
-  display: flex;
-  flex-direction: column;
-}
-
-main label {
-  font-weight: bold;
-}
-
-main textarea {
-  border: none;
-  border-bottom: 5px solid $lineColour;
-  background: transparent;
-  resize: none;
-  outline-width: 0;
-  font-size: .75em;
-}
-
-section.new-tweet .button-and-counter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1em 0em;
-}
-
-main button {
-  font-family: 'Bungee';
-  background-color: #4056A1;
-  color: white;
-  border: 0px;
-  padding: .25em .5em;
-}
-
-main output {
-  font-family: 'Bungee';
-
-}
-
+// this class is attached to .counter by jquery when the user
+// types more than 140 chars.
 .toolong {
   color: red;
 }

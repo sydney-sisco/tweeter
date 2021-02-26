@@ -112,4 +112,4 @@ const escapeText = (string) => {
 const composeClickHandler = (event) => {
   $('.new-tweet').slideToggle();
   $('#tweet-text').focus();
-}
+};

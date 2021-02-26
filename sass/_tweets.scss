@@ -1,9 +1,21 @@
-article.tweet {
+.tweet {
   display: flex;
   flex-direction: column;
   border: 5px solid $lineColour;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  .action-icons {
+    visibility: hidden;
+
+    // :hover {
+    //   visibility: visible;
+    // }
+  }
+
+  &:hover .action-icons {
+    visibility: visible;
+  }
 }
 
 article.tweet:hover {

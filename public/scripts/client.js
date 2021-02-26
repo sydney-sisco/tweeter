@@ -88,7 +88,7 @@ const createTweetElement = (tweet) => {
         <span>
           ${DateTime.fromMillis(tweet.created_at).toRelative()}
         </span>
-        <div>
+        <div class="action-icons">
           <img src="/images/flag-solid.svg" alt="report">
           <img src="/images/retweet-solid.svg" alt="retweet">
           <img src="/images/heart-regular.svg" alt="like">

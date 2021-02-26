@@ -1,7 +1,6 @@
 main {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -25,13 +24,12 @@ main form {
 }
 
 main label {
-  /* font-size: 1.5em; */
   font-weight: bold;
 }
 
 main textarea {
   border: none;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid $lineColour;
   background: transparent;
   resize: none;
   outline-width: 0;

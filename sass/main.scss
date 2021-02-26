@@ -1,3 +1,5 @@
+@import 'variables';
+
 // importing all other scss files allows for all styles 
 // to be compiled into a single .css file
 @import 'layout';
@@ -5,4 +7,3 @@
 @import 'nav';
 @import 'new-tweet';
 @import 'tweets';
-

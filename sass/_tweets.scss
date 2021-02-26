@@ -1,7 +1,7 @@
 article.tweet {
   display: flex;
   flex-direction: column;
-  border: 5px solid #545149;
+  border: 5px solid $lineColour;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -42,7 +42,7 @@ article.tweet p {
   padding: 1em 1em;
   margin: .25em 1em;
   font-weight: bolder;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid $lineColour;
 }
 
 article.tweet footer {

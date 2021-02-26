@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log('we ready to go');
-
   $('#tweet-text').on('input', function(event) {
     const totalChars = 140;
     const currentChars = $(this).val().length

@@ -47,8 +47,10 @@ const formSubmissionHandler = function(event) {
   // POST the tweet data using AJAX
   $.post('tweets/', $(this).serialize())
   .then((data) => {
-    console.log('data returned from server:', data);
+    // empty the textarea 
     $tweetTextElement.val('');
+    // trigger an input event so the listen updates the counter
+    $('#tweet-text').trigger('input');
     loadtweets();
   });
 };
@@ -56,7 +58,6 @@ const formSubmissionHandler = function(event) {
 // loads tweets from the server using AJAX
 const loadtweets = function() {
   $.get('/tweets', function(tweets) {
-    console.log(tweets);
   }).then(function(tweets) {
     renderTweets(tweets);
   });
@@ -108,7 +109,7 @@ const escapeText = (string) => {
 };
 
 // toggles the new-tweet form
-const composeClickHandler = function(event) {
+const composeClickHandler = (event) => {
   $('.new-tweet').slideToggle();
   $('#tweet-text').focus();
 }

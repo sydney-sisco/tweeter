@@ -78,14 +78,14 @@ const createTweetElement = (tweet) => {
     <article class="tweet">
       <header>
         <div>
-          <img src="${tweet.user.avatars}">
-          <h3>${tweet.user.name}</h3>
+          <img class="avatar" src="${tweet.user.avatars}">
+          <h3 class="username" >${tweet.user.name}</h3>
         </div>
-        <span>${tweet.user.handle}</span>
+        <span class="handle" >${tweet.user.handle}</span>
       </header>
       <p>${escapeText(tweet.content.text)}</p>
       <footer>
-        <span>
+        <span class="timestamp">
           ${DateTime.fromMillis(tweet.created_at).toRelative()}
         </span>
         <div class="action-icons">
@@ -100,7 +100,7 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-// TODO: move this out to a helper function file?
+// helper function used to prevent XSS in tweets
 const escapeText = (string) => {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(string));
